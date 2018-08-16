@@ -1,0 +1,21 @@
+{% extends 'mainLayout.html' %}
+{% block title %}{{ title }}{% endblock %}
+{% block pageTitle %}Add New Movie Into My List Form {% endblock %}
+{% block content %}
+<div>
+  <form action="" method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.title.label() }}
+    {{ form.title() }}
+    {{ form.description.label() }}
+    {{ form.description() }}
+    {{ form.customer.label() }}
+    {{ form.customer() }}
+    {{ form.category.label() }}
+    {{ form.category() }}
+    {{ form.submit() }}
+  </form>
+</div>
+</br>
+<a class="btn-floating grey darken-3" href="{{ url_for('home') }}"><i class="material-icons">home</i></a>
+{% endblock %}
